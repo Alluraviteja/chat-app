@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>  
+  
+   <!-- Base Definition -->
+   <definition name="base-definition" template="/WEB-INF/tiles/layouts/baseLayout.jsp">
+       <put-attribute name="title" value="" />
+       <put-attribute name="header" value="/WEB-INF/tiles/template/defaultHeader.jsp" />
+       <put-attribute name="menu" value="/WEB-INF/tiles/template/defaultMenu.jsp" />
+       <put-attribute name="body" value="" />
+       <put-attribute name="footer" value="/WEB-INF/tiles/template/defaultFooter.jsp" />
+   </definition>
+   
+   <!-- Login Base Definition -->
+   <definition name="login-base-definition" template="/WEB-INF/tiles/layouts/loginBaseLayout.jsp">
+       <put-attribute name="title" value="" />
+       <put-attribute name="header" value="" />
+       <put-attribute name="menu" value="" />
+       <put-attribute name="body" value="" />
+       <put-attribute name="footer" value="" />
+   </definition>
+   
+   <!-- User Screens  -->
+   
+   <!-- Login Page -->
+   <definition name="login" extends="login-base-definition">
+       <put-attribute name="title" value="Login" />
+       <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+   </definition>
+   
+   <!-- Create Account Page -->
+   <definition name="createAccount" extends="login-base-definition">
+       <put-attribute name="title" value="Create Account" />
+       <put-attribute name="body" value="/WEB-INF/jsp/createAccount.jsp" />
+   </definition>
+   
+   <!-- Forgot Password Page -->
+   <definition name="forgotPassword" extends="login-base-definition">
+       <put-attribute name="title" value="Reset Password" />
+       <put-attribute name="body" value="/WEB-INF/jsp/forgotPassword.jsp" />
+   </definition>
+   
+   <!-- Chat -->
+   <definition name="chat" extends="base-definition">
+       <put-attribute name="title" value="Chat" />
+       <put-attribute name="body" value="/WEB-INF/jsp/chat.jsp" />
+   </definition>
+   
+   <!-- Chess -->
+   <definition name="chess" extends="base-definition">
+       <put-attribute name="title" value="Chess Game" />
+       <put-attribute name="body" value="/WEB-INF/jsp/chessGame.jsp" />
+   </definition>
+   
+</tiles-definitions>
